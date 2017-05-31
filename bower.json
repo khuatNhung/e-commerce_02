@@ -1,0 +1,20 @@
+{
+  "name": "e-commerce_02",
+  "description": "vector",
+  "main": "",
+  "authors": [
+    "LaPhuongDuy <laphuongduy.vector@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/LaPhuongDuy/e-commerce_02",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
