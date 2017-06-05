@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::group([
+    'as' => 'admin.',
+    'prefix' => 'admin',
+    'namespace' => 'Admin'
+], function () {
+    Route::get('/', function () {
+        return view('admin.index');
+    })->name('index');
+    Route::resource('categories', 'CategoriesController', ['except' => 'show']);
+});

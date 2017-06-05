@@ -17,6 +17,6 @@ composer.lock
 app/storage/
 /public/css
 /public/fonts
-/public/img
+/public/images
 /public/js
 
