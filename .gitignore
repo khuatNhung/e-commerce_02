@@ -12,10 +12,14 @@ npm-debug.log
 .env.php
 .env
 composer.lock
-/resources/assets/bowers/
+/resources/assets/bowers
+/resources/assets/js
+/resources/assets/sass
+/resources/assets/themeuser
 /resources/assets/css/*_scss.*
 app/storage/
 /public/css
+/public/images
 /public/fonts
 /public/img
 /public/images

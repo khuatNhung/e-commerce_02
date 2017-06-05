@@ -43,4 +43,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Rating::class);
     }
+
+    public function getUrlAttribute($value)
+    {
+        return config('common.storage.user') . $value;
+    }
 }

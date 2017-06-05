@@ -11,13 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes();
 
 /*
 |--------------------------------------------------------------------------
-| 
+|
 |--------------------------------------------------------------------------
 */
 Route::group([
@@ -30,3 +28,10 @@ Route::group([
     })->name('admin.index');
     // Route::resource('categories', 'CategoriesController', ['except' => 'show']);
 });
+
+Route::resource('/home', 'User\HomeController');
+Route::resource('/product', 'User\ProductController');
+Route::resource('/rating', 'User\RatingController');
+/*Route::group(['namespace' => 'User', 'prefix' => ''], function (){
+    Route::resource('/home', 'User\HomeController');
+});*/
