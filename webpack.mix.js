@@ -1,5 +1,6 @@
 const { mix } = require('laravel-mix');
 
+const ASSETS_PATH = 'resources/assets/';
 const BOWERS_PATH = 'resources/assets/bowers/';
 const ADMIN_PATH = BOWERS_PATH + 'gentelella/';
 
@@ -43,6 +44,7 @@ mix.scripts([
     ADMIN_PATH + 'vendors/nprogress/nprogress.js',
     ADMIN_PATH + 'vendors/validator/validator.js',
     ADMIN_PATH + 'build/js/custom.min.js',
+    ASSETS_PATH + 'js/admin/editor.js',
 ], 'public/js/admin.min.js');
 
 /**

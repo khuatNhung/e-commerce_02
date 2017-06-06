@@ -46,24 +46,50 @@ return [
     'level_one' => 'Level One',
     'landing_page' => 'Landing Page ',
     'coming_soon' => 'Coming Soon',
+    'site_title' => 'Gentelella Alela!',
 
-	/*
+    /*
     |--------------------------------------------------------------------------
     | Label form
     |--------------------------------------------------------------------------
     */
-	'categories_index' => 'List Categories',
-	'name' => 'Category name',
-	'parent_category' => 'Parent category',
-	'url_category' => 'Category link',
-	'description' => 'Description',
-	'cancel' => 'Cancel',
-	'save' => 'Save',
+    'description' => 'Description',
+    'cancel' => 'Cancel',
+    'save' => 'Save',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Label view admin
+    |--------------------------------------------------------------------------
+    */
+    'can_not_find_any_records' => 'Can not find any records',
+    'action' => 'Action',
+
 	/*
     |--------------------------------------------------------------------------
-    | Label view create category
+    | Label form category
+    |--------------------------------------------------------------------------
+    */
+	'categories_index' => 'List Categories',
+	'category_name' => 'Category name',
+	'parent_category' => 'Parent category',
+	'url_category' => 'Category icon',
+	/*
+    |--------------------------------------------------------------------------
+    | Label create category
     |--------------------------------------------------------------------------
     */
 	'categories_create' => 'Create category',
-	''
+    /*
+    |--------------------------------------------------------------------------
+    | Label edit category
+    |--------------------------------------------------------------------------
+    */
+    'categories_edit' => 'Edit category',
+    /*
+    |--------------------------------------------------------------------------
+    | Label index category
+    |--------------------------------------------------------------------------
+    */
+    'new_category' => 'Create new category',
 ];

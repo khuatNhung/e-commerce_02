@@ -24,4 +24,7 @@ app/storage/
 /public/img
 /public/images
 /public/js
+/public/filemanager
+/public/uploads
+/public/thumbs
 
