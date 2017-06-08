@@ -17,4 +17,37 @@ class Category extends Model
     {
         return $this->hasMany(Product::class);
     }
+
+    /**
+     * Recursive categories.
+     *
+     */
+    public static function recursive($categories, $parentId = 0, $indent = '', $options = [])
+    {
+        foreach ($categories as $key => $category) {
+            if ($category->parent_id === $parentId) {
+                $options[$category->id] = $indent . $category->name;
+                $categories->pull($key);
+                $options = static::recursive($categories, $category->id, $indent . '--', $options);
+            }
+        }
+
+        return $options;
+    }
+
+    /**
+     * Get recursive all categories.
+     *
+     */
+    public static function getRecursiveCategoriesOptions()
+    {
+        $categories = Category::all(['id', 'parent_id', 'name']);
+
+        $options = static::recursive($categories);
+
+        return $options;
+    }
+
 }
+
+

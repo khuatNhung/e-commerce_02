@@ -6,9 +6,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="base-url" content="{{ url('/') }}">
         <title>@yield('title')</title>
         {{ Html::style(mix('css/admin.min.css')) }}
-        
+
     </head>
     <body class="nav-md">
         <div class="container body">
@@ -16,7 +17,7 @@
                 <div class="col-md-3 left_col">
                     <div class="left_col scroll-view">
                         <div class="navbar nav_title" style="border: 0;">
-                            <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+                            <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>{!! trans('admin/label.site_title') !!}</span></a>
                         </div>
                         <div class="clearfix"></div>
                         <!-- menu profile quick info -->
@@ -46,7 +47,7 @@
                                     <div class="input-group">
                                         <input type="text" class="form-control" placeholder="Search for...">
                                         <span class="input-group-btn">
-                                            <button class="btn btn-default" type="button">Go!</button>
+                                            <button class="btn btn-default" type="button">{!! trans('admin/label.button_go') !!}</button>
                                         </span>
                                     </div>
                                 </div>
@@ -63,12 +64,6 @@
                                         </li>
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Settings 1</a>
-                                            </li>
-                                            <li><a href="#">Settings 2</a>
-                                        </li>
-                                    </ul>
                                 </li>
                                 <li><a class="close-link"><i class="fa fa-close"></i></a>
                             </li>
@@ -76,6 +71,15 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
+                    @if (session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @elseif (session('failure'))
+                        <div class="alert alert-danger">
+                            {{ session('failure') }}
+                        </div>
+                    @endif
                         @yield('content')
                     </div>
                 </div>
@@ -89,8 +93,13 @@
 <!-- /footer content -->
 </div>
 </div>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" id="myModal" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg modalStyle" role="document" id="iframex">
+    </div>
+</div>
 {{ Html::script(mix('js/admin.min.js')) }}
 @stack('scripts')
 </body>
 </html>
+
 
