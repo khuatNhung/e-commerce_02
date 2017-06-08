@@ -92,4 +92,71 @@ return [
     |--------------------------------------------------------------------------
     */
     'new_category' => 'Create new category',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Label form brand
+    |--------------------------------------------------------------------------
+    */
+    'brand_index' => 'List brands',
+    'brand_name' => 'Brand name',
+    'founded_year_brand' => 'Founded year brand',
+    'url_brand' => 'Brand image',
+    /*
+    |--------------------------------------------------------------------------
+    | Label create brand
+    |--------------------------------------------------------------------------
+    */
+    'brand_create' => 'Create brand',
+    /*
+    |--------------------------------------------------------------------------
+    | Label edit brand
+    |--------------------------------------------------------------------------
+    */
+    'brand_edit' => 'Edit brand',
+    /*
+    |--------------------------------------------------------------------------
+    | Label index brand
+    |--------------------------------------------------------------------------
+    */
+    'new_brand' => 'Create new brand',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Label form product
+    |--------------------------------------------------------------------------
+    */
+    'products_index' => 'List products',
+    'product_name' => 'Product name',
+    'product_brand' => 'Brand name',
+    'product_category' => 'Category name',
+    'url_product' => 'Product image',
+    'product_volume' => 'Product volume',
+    'product_price' => 'Product price',
+    'product_price_sale' => 'Product price sale',
+    'product_sale_detail' => 'Product sale detail',
+    'product_vintage' => 'Product vintage',
+    'product_age' => 'Product age',
+    'product_country' => 'Product country',
+    'product_alcohol' => 'Product alcohol',
+    'product_material' => 'Product material',
+    'product_images' => 'Product images',
+    /*
+    |--------------------------------------------------------------------------
+    | Label create product
+    |--------------------------------------------------------------------------
+    */
+    'product_create' => 'Create product',
+    /*
+    |--------------------------------------------------------------------------
+    | Label edit product
+    |--------------------------------------------------------------------------
+    */
+    'product_edit' => 'Edit product',
+    /*
+    |--------------------------------------------------------------------------
+    | Label index product
+    |--------------------------------------------------------------------------
+    */
+    'new_product' => 'Create new product',
 ];
