@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Product extends Model
 {
     use SoftDeletes;
+
     protected $fillable = [
         'name',
         'brand_id',
@@ -55,5 +56,35 @@ class Product extends Model
     public function comments()
     {
         return $this->hasMany(Comment::class);
+    }
+
+    public function getUrlAttribute($value)
+    {
+        return config('common.storage.product') . $value;
+    }
+
+    public function getScoreAttribute($value)
+    {
+        return $value * 20;
+    }
+
+    public function getPriceAttribute($value)
+    {
+        return '$' . $value . '.00';
+    }
+
+    public function getPriceSaleAttribute($value)
+    {
+        if($value !== NULL)
+        {
+            return '$' . $value . '.00';
+        }
+
+        return $value;
+    }
+
+    public function getVolumeAttribute($value)
+    {
+        return $value . ' ml';
     }
 }
