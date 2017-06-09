@@ -29,6 +29,7 @@ Route::group([
     Route::resource('categories', 'CategoriesController', ['except' => 'show']);
     Route::resource('brands', 'BrandsController', ['except' => 'show']);
     Route::resource('products', 'ProductsController', ['except' => 'show']);
+    Route::resource('users', 'UsersController', ['except' => 'show']);
 });
 
 Route::resource('/home', 'User\HomeController');
